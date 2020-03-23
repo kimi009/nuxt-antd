@@ -35,7 +35,13 @@
         </a-col>
       </template>
     </a-row>
-    <a-button type="primary" @click="toDetail">跳页面测试</a-button>
+    <a-row type="flex" justify="center">
+      <a-col
+        ><a-button type="primary" @click="toDetail"
+          >测试页面跳转渲染情况</a-button
+        ></a-col
+      >
+    </a-row>
   </div>
 </template>
 
