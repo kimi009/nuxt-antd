@@ -11,7 +11,7 @@
     "generate": "nuxt generate",
     "lint": "eslint --ext .js,.vue --ignore-path .gitignore .",
     "deploy": "pm2 start npm --name nuxt -- start",
-    "dp":"pm2 reload ecosystem.config.js --only PSB_DEV --env dev"
+    "dp":"pm2 reload ecosystem.config.js --only Nuxt_Test --env prod"
   },
   "dependencies": {
     "@nuxtjs/axios": "^5.3.6",

@@ -1,7 +1,7 @@
 module.exports = {
   apps: [
     {
-      name: 'NuxtAntDesignTest',
+      name: 'Nuxt_Test',
       script: 'server/index.js',
 
       // Options reference: https://pm2.keymetrics.io/docs/usage/application-declaration/
