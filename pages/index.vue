@@ -38,7 +38,7 @@
     <a-row type="flex" justify="center">
       <a-col
         ><a-button type="primary" @click="toDetail"
-          >测试页面跳转渲染情况</a-button
+          >测试页面跳转渲染</a-button
         ></a-col
       >
     </a-row>
