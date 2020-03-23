@@ -1,7 +1,7 @@
 module.exports = {
   apps: [
     {
-      name: 'API',
+      name: 'NuxtAntDesignTest',
       script: 'server/index.js',
 
       // Options reference: https://pm2.keymetrics.io/docs/usage/application-declaration/
@@ -13,7 +13,7 @@ module.exports = {
       env: {
         NODE_ENV: 'development'
       },
-      env_production: {
+      env_prod: {
         NODE_ENV: 'production'
       }
     }
