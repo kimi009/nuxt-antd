@@ -1,10 +1,10 @@
 <template>
-  <div>
-    <a-menu v-model="current" mode="horizontal">
+  <div class="page-index">
+    <a-menu v-model="current" mode="horizontal" theme="dark">
       <a-menu-item key="mail">
         <a-icon type="mail" />Navigation One
       </a-menu-item>
-      <a-menu-item key="app" disabled>
+      <a-menu-item key="app">
         <a-icon type="appstore" />Navigation Two
       </a-menu-item>
       <a-sub-menu>
@@ -26,13 +26,40 @@
         >
       </a-menu-item>
     </a-menu>
+    <a-row :gutter="16">
+      <template v-for="item in list">
+        <a-col :key="item.id" :span="8">
+          <a-card :title="item.name" :bordered="false">
+            <p>{{ item.des }}</p>
+          </a-card>
+        </a-col>
+      </template>
+    </a-row>
+    <a-button type="primary" @click="toDetail">跳页面测试</a-button>
   </div>
 </template>
+
 <script>
 export default {
+  components: {},
+  async asyncData({ $axios }) {
+    const {
+      status,
+      data: { list }
+    } = await $axios.get('/user/info')
+    if (status === 200) {
+      return { list }
+    }
+    return { list: [] }
+  },
   data() {
     return {
       current: ['mail']
+    }
+  },
+  methods: {
+    toDetail() {
+      location.href = '/users/111'
     }
   }
 }
